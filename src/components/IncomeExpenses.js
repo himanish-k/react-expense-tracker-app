@@ -5,7 +5,7 @@ export const IncomeExpenses = () => {
     const { transactions } = useContext(GlobalContext);
     let income = 0;
     let expense = 0;
-    transactions.map(t => {
+    transactions.forEach(t => {
         if (t.amount < 0)
             expense += t.amount;
         else
